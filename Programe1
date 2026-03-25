@@ -1,1 +1,16 @@
-
+# If students are more than packets
+    if m > n:
+        return -1
+    
+    # Sort the array
+    arr.sort()
+    
+    # Initialize minimum difference
+    min_diff = float('inf')
+    
+    # Sliding window approach
+    for i in range(n - m + 1):
+        diff = arr[i + m - 1] - arr[i]
+        min_diff = min(min_diff, diff)
+    
+    return min_diff
